@@ -1,0 +1,140 @@
+# 🔐 Projeto 01 — Arquitetura de Rede Corporativa Segura
+
+## 📌 Visão Geral
+Este projeto apresenta a implementação de uma **arquitetura de rede corporativa segura**, simulando um ambiente real de pequena/média empresa, com **segmentação de rede**, **firewall perimetral**, **controle de tráfego**, **serviços centralizados** e **monitoramento contínuo**.
+
+O foco está na **segurança**, **organização**, **menor privilégio** e **boas práticas de infraestrutura**.
+
+---
+
+## 🎯 Objetivo
+- Projetar uma arquitetura de rede segura e organizada  
+- Implementar segmentação lógica de rede  
+- Aplicar regras de firewall baseadas em menor privilégio  
+- Centralizar serviços corporativos  
+- Integrar monitoramento e visibilidade da infraestrutura  
+
+---
+
+## 🏗️ Arquitetura do Ambiente
+
+### Componentes principais
+- **Firewall:** pfSense (perímetro da rede)
+- **Servidor Windows Server (AD):**
+  - Active Directory
+  - DNS
+  - Políticas de domínio
+- **Servidor Windows Server (File Server):**
+  - Compartilhamentos corporativos
+  - Controle de acesso por grupos
+- **Endpoint Windows 10 Pro:**
+  - Máquina de testes
+  - Simulação de estação corporativa
+- **Servidor Linux (Rocky Linux):**
+  - Host Docker
+  - Serviços corporativos
+- **Monitoramento:** Zabbix
+
+---
+
+## 🌐 Segmentação de Rede (Exemplo)
+
+| Segmento | Finalidade |
+|--------|-----------|
+| LAN | Estações de trabalho |
+| SERVERS | Servidores Windows e Linux |
+| MGMT | Gerenciamento e monitoramento |
+| WAN | Acesso externo |
+
+✔️ Comunicação controlada entre segmentos  
+✔️ Bloqueio de tráfego desnecessário  
+✔️ Acesso liberado apenas por necessidade operacional  
+
+---
+
+## 🔥 Firewall e Segurança (pfSense)
+
+### Controles aplicados
+- Política **deny by default**
+- Regras explícitas de liberação
+- Controle de tráfego entre VLANs
+- Bloqueio de acesso direto desnecessário aos servidores
+- Logs habilitados para auditoria
+
+---
+
+## 🖥️ Serviços Centralizados
+- Autenticação centralizada via Active Directory
+- Resolução de nomes via DNS interno
+- Compartilhamentos de arquivos centralizados
+- Serviços Linux isolados via containers
+
+---
+
+## 📊 Monitoramento
+- Monitoramento de disponibilidade de servidores
+- Monitoramento de serviços críticos
+- Visibilidade de falhas e indisponibilidades
+- Base para resposta a incidentes
+
+---
+
+## 🔐 Controles de Segurança Aplicados
+- Segmentação lógica de rede
+- Princípio do menor privilégio
+- Firewall perimetral e interno
+- Centralização de autenticação
+- Monitoramento contínuo
+- Registro de eventos
+
+---
+
+## 🧪 Testes Realizados
+- Teste de acesso entre segmentos
+- Teste de bloqueio de tráfego indevido
+- Teste de acesso a serviços autorizados
+- Simulação de falha de serviço
+- Validação de logs e alertas
+
+---
+
+## 📂 Estrutura do Projeto
+
+01-arquitetura-rede-segura
+├─ ´diagramas´
+├─ ´configuracões´
+├─ ´evidências´
+└─ README.md
+
+
+---
+
+## 📚 Lições Aprendidas
+- A segmentação reduz significativamente a superfície de ataque
+- Regras simples e bem definidas facilitam manutenção
+- Monitoramento é essencial para segurança e operação
+- Documentação clara é tão importante quanto a configuração técnica
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+- pfSense
+- Windows Server
+- Windows 10 Pro
+- Windows 11 Pro
+- Rocky Linux
+- Docker
+- Zabbix
+
+---
+
+## 👩‍💻 Autora
+**Emanuelle Ferreira Rêgo**  
+Infraestrutura • Redes • Segurança da Informação
+
+---
+
+## ✅ Status do Projeto
+✔️ Concluído  
+✔️ Documentado  
+✔️ Integrado ao portfólio
